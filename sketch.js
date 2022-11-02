@@ -81,6 +81,17 @@ function keyReleased() {
 
 function setup() {
     noLoop();
+    //color background white
+    scene.clearColor = new BABYLON.Color3.FromHexString('#ffffff');
+
+    //initialize camera
+    var camera = new BABYLON.ArcRotateCamera("Camera", 3 * Math.PI / 2, Math.PI / 4, 100, BABYLON.Vector3.Zero(), scene);
+    camera.attachControl(canvas, true);
+
+    //initialize light
+    var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+    light.intensity = 1;
+
 
     synth = new Tone.PolySynth(Tone.MonoSynth, {
         volume: -8,
@@ -170,20 +181,8 @@ var scene = null;
 var sceneToRender = null;
 var createDefaultEngine = function () { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }); };
 var createScene = function () {
-    //set the scene here
+
     var scene = new BABYLON.Scene(engine);
-
-    //color background white
-    scene.clearColor = new BABYLON.Color3.FromHexString('#ffffff');
-
-    //initialize camera
-    var camera = new BABYLON.ArcRotateCamera("Camera", 3 * Math.PI / 2, Math.PI / 4, 100, BABYLON.Vector3.Zero(), scene);
-    camera.attachControl(canvas, true);
-
-    //initialize light
-    var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
-    light.intensity = 1;
-
     return scene;
 }
 window.initFunction = async function () {
