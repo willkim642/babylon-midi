@@ -4,11 +4,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>Babylon.js sample code</title>
-
-    <!-- Babylon.js -->
+    <title>MIDI Arrays + Objects</title>
+    <!--MIDI Library, see reference here: https://www.smashingmagazine.com/2018/03/web-midi-api/-->
     <script src="./scripts/webmidi.iife.js"></script>
 
+    <!-- Babylon.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
     <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
     <script src="https://preview.babylonjs.com/ammo.js"></script>
@@ -23,8 +23,11 @@
     <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
     <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
     <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+    <!-- Art 151 babylon add on -->
+    <script src="https://art-151.github.io/babylon-basic/art151.js"></script>
+     <!-- include p5 functionality -->
     <script src="./scripts/p5.js"></script>
-
+     <!-- Musical Tones -->
     <script src="./scripts/Tone.js"></script>
 
 
@@ -49,9 +52,9 @@
 </head>
 
 <body>
-    <h1 id = 'start'> Click to begin! </h1>
+    <h1 id = 'txt'> Click to begin! </h1>
     <canvas id="renderCanvas">
-  
+
     </canvas>
 
     <script src="sketch.js"> </script>
