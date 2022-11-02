@@ -76,6 +76,7 @@ function keyReleased() {
     stopNote(keynotes[keyCode]);
 }
 
+
 function setup() {
     noLoop();
     //color background white
