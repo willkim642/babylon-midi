@@ -1,8 +1,5 @@
 //https://editor.p5js.org/howshekilledit/sketches/P00w6cEmL
-
-
 let piano_init = false;
-let notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 
 //default function plays note on keypress
 
